@@ -34,7 +34,6 @@
   },
   "name":"2DSideScrollingPlatformer",
   "resources":[
-    {"id":{"name":"font_opensans_1","path":"fonts/font_opensans_1/font_opensans_1.yy",},},
     {"id":{"name":"font_opensans","path":"fonts/font_opensans/font_opensans.yy",},},
     {"id":{"name":"Button_parent_obj","path":"objects/Button_parent_obj/Button_parent_obj.yy",},},
     {"id":{"name":"Coin_obj","path":"objects/Coin_obj/Coin_obj.yy",},},
