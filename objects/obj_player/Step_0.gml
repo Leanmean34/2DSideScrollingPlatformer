@@ -86,6 +86,7 @@ else
 /// @DnDAction : YoYo Games.Movement.move_and_collide
 /// @DnDVersion : 1
 /// @DnDHash : 2364C47D
+/// @DnDComment : object is the object being avoided by the collision
 /// @DnDApplyTo : {obj_player}
 /// @DnDArgument : "xvel" "move_x"
 /// @DnDArgument : "yvel" "move_y"

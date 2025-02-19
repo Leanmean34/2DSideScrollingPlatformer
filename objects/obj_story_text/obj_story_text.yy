@@ -1,11 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"Button_parent_obj",
-  "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_story_text",
+  "eventList":[],
   "managed":true,
-  "name":"Button_parent_obj",
+  "name":"obj_story_text",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -29,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"textbox_spr",
+    "path":"sprites/textbox_spr/textbox_spr.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
