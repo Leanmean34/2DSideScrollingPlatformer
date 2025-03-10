@@ -50,6 +50,7 @@
     {"id":{"name":"Menu","path":"rooms/Menu/Menu.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"Story","path":"rooms/Story/Story.yy",},},
+    {"id":{"name":"Pickup_Coin","path":"sounds/Pickup_Coin/Pickup_Coin.yy",},},
     {"id":{"name":"Coin_spr","path":"sprites/Coin_spr/Coin_spr.yy",},},
     {"id":{"name":"play_button_spr","path":"sprites/play_button_spr/play_button_spr.yy",},},
     {"id":{"name":"SpeedPowerup_spr","path":"sprites/SpeedPowerup_spr/SpeedPowerup_spr.yy",},},
