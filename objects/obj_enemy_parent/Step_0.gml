@@ -10,8 +10,8 @@
 /// @DnDAction : YoYo Games.Miscellaneous.Debug_Show_Message
 /// @DnDVersion : 1
 /// @DnDHash : 55F18B5D
-/// @DnDArgument : "msg" "move_x"
-show_debug_message(string(move_x));
+/// @DnDArgument : "msg" "collision_tilemap"
+show_debug_message(string(collision_tilemap));
 
 /// @DnDAction : YoYo Games.Collisions.If_Object_At
 /// @DnDVersion : 1.1
@@ -45,7 +45,7 @@ if ((l664D11EE_0 > 0))
 		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 1C09D3D3
-		/// @DnDComment : jump
+		/// @DnDComment : jump over the wall
 		/// @DnDParent : 1436802C
 		/// @DnDArgument : "expr" "-jump_speed"
 		/// @DnDArgument : "var" "move_y"
@@ -55,6 +55,7 @@ if ((l664D11EE_0 > 0))
 	/// @DnDAction : YoYo Games.Collisions.If_Object_At
 	/// @DnDVersion : 1.1
 	/// @DnDHash : 1C308FE1
+	/// @DnDComment : is there a gap in the floor?
 	/// @DnDParent : 664D11EE
 	/// @DnDArgument : "x" "x + (30 * sign(move_x))"
 	/// @DnDArgument : "y" "y + 50"
@@ -65,7 +66,16 @@ if ((l664D11EE_0 > 0))
 	{
 		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
+		/// @DnDHash : 5CC13F92
+		/// @DnDParent : 1C308FE1
+		/// @DnDArgument : "expr" "move_x * -1"
+		/// @DnDArgument : "var" "move_x"
+		move_x = move_x * -1;
+	
+		/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
 		/// @DnDHash : 2DD87785
+		/// @DnDComment : jump
 		/// @DnDParent : 1C308FE1
 		/// @DnDArgument : "expr" "-jump_speed"
 		/// @DnDArgument : "var" "move_y"
