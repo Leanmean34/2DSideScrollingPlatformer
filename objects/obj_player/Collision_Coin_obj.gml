@@ -26,7 +26,7 @@ coins += 1;
 
 /// @DnDAction : YoYo Games.Audio.Play_Audio
 /// @DnDVersion : 1.1
-/// @DnDHash : 275DC3E5
+/// @DnDHash : 45C6F046
 /// @DnDArgument : "soundid" "Pickup_Coin"
 /// @DnDSaveInfo : "soundid" "Pickup_Coin"
 audio_play_sound(Pickup_Coin, 0, 0, 1.0, undefined, 1.0);
