@@ -2,9 +2,31 @@
 /// @DnDVersion : 1
 /// @DnDHash : 618F1027
 /// @DnDComment : 1 would be pressing right$(13_10)-1 would be pressing left$(13_10)0 would be no input
+/// @DnDDisabled : 1
 /// @DnDArgument : "expr" "keyboard_check(vk_right) - keyboard_check(vk_left)"
 /// @DnDArgument : "var" "move_x"
-move_x = keyboard_check(vk_right) - keyboard_check(vk_left);
+
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 36D52F5B
+/// @DnDArgument : "expr" "keyboard_check(vk_left)||gamepad_button_check(0,gp_padl)||(gamepad_axis_value(0,gp_axislh) < -0.2)"
+/// @DnDArgument : "var" "controls_input_left"
+controls_input_left = keyboard_check(vk_left)||gamepad_button_check(0,gp_padl)||(gamepad_axis_value(0,gp_axislh) < -0.2);
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 6D072CE9
+/// @DnDArgument : "expr" "keyboard_check(vk_right)||gamepad_button_check(0,gp_padr)||(gamepad_axis_value(0,gp_axislh) > 0.2)"
+/// @DnDArgument : "var" "controls_input_right"
+controls_input_right = keyboard_check(vk_right)||gamepad_button_check(0,gp_padr)||(gamepad_axis_value(0,gp_axislh) > 0.2);
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 6C9BC674
+/// @DnDArgument : "expr" "controls_input_right - controls_input_left"
+/// @DnDArgument : "var" "move_x"
+move_x = controls_input_right - controls_input_left;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
@@ -50,6 +72,25 @@ if ((l664D11EE_0 > 0))
 		/// @DnDHash : 1C09D3D3
 		/// @DnDComment : jump
 		/// @DnDParent : 71A749E6
+		/// @DnDArgument : "expr" "-jump_speed"
+		/// @DnDArgument : "var" "move_y"
+		move_y = -jump_speed;
+	}
+
+	/// @DnDAction : YoYo Games.Gamepad.If_Gamepad_Button_Pressed
+	/// @DnDVersion : 1.1
+	/// @DnDHash : 51B74250
+	/// @DnDParent : 664D11EE
+	/// @DnDArgument : "btn" "gp_face1"
+	var l51B74250_0 = 0;
+	var l51B74250_1 = gp_face1;
+	if(gamepad_is_connected(l51B74250_0) && gamepad_button_check_pressed(l51B74250_0, l51B74250_1))
+	{
+		/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 1F6EBF90
+		/// @DnDComment : jump
+		/// @DnDParent : 51B74250
 		/// @DnDArgument : "expr" "-jump_speed"
 		/// @DnDArgument : "var" "move_y"
 		move_y = -jump_speed;
